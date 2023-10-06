@@ -11,6 +11,14 @@ For example, precision would show what proportion of predicted positives was act
 Then specificity demonstrates the proportion of actual negatives that is actually negative where as negative predictive values provides the percentage of predicted negatives that are actually negative.
 To sum up the the formula for calculating the elements in a confusion matrix, please refer to the table below.
 
-
-
 3. Using Resampling Techniques
+Based on the level of imbalance, either oversampling the rare observations or undersamling the rich observations should be applied. However, discretion must be raised when certain events happen rarely which makes the model better off to remain as imbalanced. Refer to appropriate evaluation function for accurate results.
+
+4. Generating Synthetic Data Points
+In cases where synthetic data points come into play, SMOTE is a technique to generate more rare-class data points for oversampling purpose.
+
+5. Adopting Ensemble Models
+It is also beneficial to assign some proportion of the data points based on classes to run on different ensemble models. For logistic regression which works well on imbalanced datasets, threshold should be adjusted accordingly.
+
+6. Customize Cost Function
+A complex way to adopt when resampling is not able to apply is to redesign a proper penalty system for the machine learning model.
