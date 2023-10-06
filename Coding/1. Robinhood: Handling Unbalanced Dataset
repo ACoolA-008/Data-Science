@@ -1,2 +1,16 @@
 Robinhood: Say your are building a binary classifier for an unbalanced dataset (where one class is much rarer than the other, say 1% and 99%, respectively). How do you handle this situation?
 
+There are a few approaches to deal with unbalanced classes:
+
+1. Getting More Data
+First and foremost thing to assure data authenticity and consistency, it is necessary to acquire more data points that can be added into the original datasets. However, it is sometimes very expansive or difficult to obtain any more data.
+
+2. Changing Accuracy Metrics from Accuracy to Precision, Recall, F1 Score, and the ROC Curve
+Accuracy will become less predictive when the data points fed into the accuracy metrics are imbalanced. Therefore, confusion matrix will reflect on more nuanced results of the model performance. 
+For example, precision would show what proportion of predicted positives was actually positive. Sensitivity (or is called Recall) would show the proportion of actual positives was actually positive. 
+Then specificity demonstrates the proportion of actual negatives that is actually negative where as negative predictive values provides the percentage of predicted negatives that are actually negative.
+To sum up the the formula for calculating the elements in a confusion matrix, please refer to the table below.
+
+
+
+3. Using Resampling Techniques
